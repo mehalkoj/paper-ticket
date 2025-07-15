@@ -12,6 +12,7 @@
   "dependencies": {
     "jest": "^30.0.4",
     "next": "15.3.5",
+    "openid-client": "^6.6.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

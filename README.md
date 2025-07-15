@@ -4,7 +4,7 @@ This project is a learning experience to gain more skills in the full-stack real
 ---
 The purpose of this project is to create a Ticket System that replicates a SAAS setup. The goal is to improve my skills all around not just one area. I plan to do a write up at the end of this project on my substack and more than likely have some markdown files in a dir somewhere here. I already have my basic data design pages in design_pages.
 
-The front end may eventually be deployed to Vercel but as of right now it is going to be running on my local machine. I decided to go with the workflow [GitFlow](https://www.gitkraken.com/learn/git/git-flow) for this project. Utilizing an API key, the application will call the API built in AWS, once the token matches it will make the appropriate calls to the lambda functions that will essentially be SQL POST and GET requests for the Users and Tickets tables in the Postgre database. 
+This will be an SPA on Vercel for front end. I decided to go with the workflow [GitFlow](https://www.gitkraken.com/learn/git/git-flow) for this project. Cognito will be used to dish out JWT keys for user auth, once a user is signed in the API will activate the Lambda functions that pull in data from the specified User's tables. 
 ![Idea Sketch](./desgin_pages/high-overview.png)
 
 ## Tech
