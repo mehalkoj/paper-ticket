@@ -12,7 +12,9 @@
   "dependencies": {
     "jest": "^30.0.4",
     "next": "15.3.5",
+    "next-auth": "^4.24.11",
     "openid-client": "^6.6.2",
+    "playwright": "^1.54.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
