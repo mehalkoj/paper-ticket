@@ -1,17 +1,34 @@
-import Link from 'next/link'
+import Link from 'next/link';
+import Login from './_components/Login';
+import Ticket from './_components/Ticket';
+import { redirect } from 'next/navigation';
+import { getSession, login, logout } from '@/lib';
 
-export default function Home() {
+export default async function Home() {
+  const session = await getSession();
   return (
-    <div className="">
-      <Link href="/settings">Settings</Link>
-
-
-      <div className="">
-        {/* Ticket Box, Each ticket will be a component genereated from tickets in db */}
-
-        </div>
-
-
-      </div>
+      <section>
+        <form
+          action={async (formData) => {
+            "use server";
+            await login(formData);
+            redirect('/');
+          }}
+        >
+          <input type="email" placeholder="Email" />
+          <br />
+          <button type="submit">Login</button>
+        </form>
+        <form
+          action={async () => {
+            'use server';
+            await logout();
+            redirect('/');
+          }}
+        >
+          <button type="submit">Logout</button>
+        </form>
+        <pre>{JSON.stringify(session, null, 2)}</pre>
+      </section>
   );
 }
