@@ -9,9 +9,14 @@ This will be an SPA on Vercel for front end. I decided to go with the workflow [
 
 ## Tech
 ---
+- React
 - Next.js
 - TailwindCSS
+- Heroicons
+- Headless UI
+- SWR
 - Jest
+- React Testing Library
 - AWS (Lambda, API Gateway, Cognito, S3, CloudWatch)
 
 This list will for sure grow due to the idea of implementing a CI/CD pipeline with something like GitHub Actions then throwing Terraform into the mix.
@@ -29,4 +34,3 @@ This list will for sure grow due to the idea of implementing a CI/CD pipeline wi
 
 ## What is Done
 ---
-- ~~Setup~~
