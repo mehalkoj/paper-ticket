@@ -4,30 +4,25 @@ import Ticket from './_components/Ticket';
 import { redirect } from 'next/navigation';
 import { getSession, login, logout } from '@/lib';
 
-export default async function Home() {
-  const session = await getSession();
-  return (
-      <section>
-        <form
-          action={async (formData) => {
+
+export async function loginAction(formData: FormData){
             "use server";
             await login(formData);
             redirect('/');
-          }}
-        >
-          <input type="email" placeholder="Email" />
-          <br />
-          <button type="submit">Login</button>
-        </form>
-        <form
-          action={async () => {
+}
+
+export async function logoutAction(formData: FormData){
             'use server';
             await logout();
             redirect('/');
-          }}
-        >
-          <button type="submit">Logout</button>
-        </form>
+}
+
+
+export default async function Home() {
+      const session = await getSession();
+  return (
+      <section>
+        <Login action={loginAction}/>
         <pre>{JSON.stringify(session, null, 2)}</pre>
       </section>
   );
