@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^2.2.4",
     "@heroicons/react": "^2.2.0",
+    "bcrypt": "^6.0.0",
     "jest": "^30.0.4",
     "jose": "^6.0.12",
     "next": "15.3.5",
