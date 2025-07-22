@@ -67,3 +67,10 @@ export async function updateSession(request: NextRequest) {
     });
     return res;
 }
+
+export async function fetchLogin(){
+    const URL = process.env.Login;
+    const res = await fetch(URL);
+    return await res.json();
+    //return Response.json({ data });
+}
