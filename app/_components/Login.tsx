@@ -5,7 +5,7 @@ import clsx from 'clsx'
 export default function Login(){
 
     return (
-        <div className="w-full max-w-md px-4">
+        <div className="p-6 flex flex-col items-center w-full max-w-md px-4 bg-neutral-100 rounded-xl">
             <Field>
                 <Label className="text-sm/6 font-medium text-black">Email</Label>
                 <Input
@@ -24,7 +24,7 @@ export default function Login(){
                     )}
                     />
             </Field>
-            <Button className="rounded bg-sky-600 px-4 py-2 text-sm text-white data-active:bg-sky-700 data-hover:bg-sky-500">
+            <Button className="mt-6 mb-6 rounded bg-sky-600 px-4 py-2 text-sm text-white data-active:bg-sky-700 data-hover:bg-sky-500">
                     Submit
             </Button>
         </div>
