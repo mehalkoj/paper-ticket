@@ -19,18 +19,29 @@ export async function logoutAction(formData: FormData){
 
 
 
-
-
 export default async function Home() {
       const session = await getSession();
       const data = await fetchLogin();
 
   return (
-      <section>
+      /*<section>
         <Login action={loginAction}/>
         <pre>{JSON.stringify(session, null, 2)}</pre>
 
         <pre>{JSON.stringify(data, null, 2)}</pre>
-      </section>
+      </section>*/
+      
+    <section>
+      <div className="flex items-center justify-center min-h-screen">
+        <Login />
+      </div>
+
+      <div className="">
+        {/* Ticket Box, Each ticket will be a component genereated from tickets in db */}
+
+        </div>
+
+
+    </section>
   );
 }
